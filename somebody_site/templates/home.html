@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>home</title>
 </head>
 <body>
-$END$
+    <h1 align="centre">THIS IS HOME PAGE</h1>
+    <form action="http://127.0.0.1:8000/page1/" method="post"
+          autocomplete="on" name="myform"  >
+        {% csrf_token %}
+        <p>
+            <label for="fname">first name</label>
+            <input type="text" maxlength="50" name="fname" id="fname">
+        </p>
+        <p>
+            <label for="lname">last name</label>
+            <input type="text" maxlength="50" name="lname" id="lname">
+        </p>
+        <p>
+            <label for="pas">password</label>
+            <input type="password" id="pas" name="pas">
+        </p>
+        <p>
+            <input type="submit" value="нажми меня">
+        </p>
+        
+    </form>
 </body>
 </html>
